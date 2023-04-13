@@ -28,8 +28,7 @@ class HelloResult with BasicResult {
             document[keyMaxMessageSizeBytes] as int? ?? 48000000,
         maxWriteBatchSize = document[keyMaxWriteBatchSize] as int? ?? 100000,
         localTime = document[keyLocalTime] as DateTime,
-        logicalSessionTimeoutMinutes =
-            document[keyLogicalSessionTimeoutMinutes] as int,
+        logicalSessionTimeoutMinutes = document[keyLogicalSessionTimeoutMinutes] as int? ?? 10,
         minWireVersion = document[keyMinWireVersion] as int,
         maxWireVersion = document[keyMaxWireVersion] as int,
         readOnly = document[keyReadOnly] as bool? ?? false {
